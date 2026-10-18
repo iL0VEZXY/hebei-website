@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>小游戏列表</title>
+    <meta name="description" content="自制小游戏列表，包括俄罗斯方块。" />
+    <link rel="stylesheet" href="assets/styles.css" />
+  </head>
+  <body data-page="projects">
+    <div class="bg-layer"></div>
+    <header class="site-header">
+      <nav class="nav" aria-label="主导航">
+        <a class="brand" href="index.html" aria-label="返回首页">
+          <span class="brand-mark" aria-hidden="true">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 7.5A2.5 2.5 0 0 1 7.5 5h9A2.5 2.5 0 0 1 19 7.5v9A2.5 2.5 0 0 1 16.5 19h-9A2.5 2.5 0 0 1 5 16.5v-9Zm3.2 3.3h7.6M8 16.5h8M9.5 5v3m5-3v3" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </span>
+          <span>何北的工作小站</span>
+        </a>
+        <button class="nav-toggle" type="button" aria-label="展开导航" aria-expanded="false"><span></span><span></span><span></span></button>
+        <div class="nav-links">
+          <a href="index.html" data-nav="home">首页</a>
+          <a href="analysis.html" data-nav="analysis">分析</a>
+          <a href="projects.html" data-nav="projects">捣鼓</a>
+          <a href="blog.html" data-nav="blog">博客</a>
+          <a href="experience.html" data-nav="experience">经历</a>
+          <a href="contact.html" data-nav="contact">联系</a>
+        </div>
+      </nav>
+    </header>
+
+    <main class="page-shell content-page">
+      <section class="section-shell">
+        <div class="page-header">
+          <p class="eyebrow">小型娱乐</p>
+          <h1>小游戏列表</h1>
+          <p>自制小游戏统一入口，后续新增游戏只需补充列表项与对应页面即可。</p>
+        </div>
+      </section>
+
+      <section class="section-shell game-list-page">
+        <article class="glass-card game-entry">
+          <div>
+            <span class="game-tag">TETRIS</span>
+            <h2>俄罗斯方块</h2>
+            <p>经典方块落下与消行，支持键盘和触控，适合在碎片时间里放松一下。</p>
+          </div>
+          <div class="game-actions">
+            <a class="primary-btn" href="games/tetris.html">开始游玩</a>
+          </div>
+        </article>
+
+        <article class="glass-card game-entry muted">
+          <div>
+            <span class="game-tag">COMING SOON</span>
+            <h2>后续小游戏</h2>
+            <p>保留扩展结构，后续用户提供新的小游戏代码时，可以直接追加到这个列表中。</p>
+          </div>
+          <div class="game-actions">
+            <button class="secondary-btn" type="button">敬请期待</button>
+          </div>
+        </article>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <p>© 2026 何北 · 用热爱构建生活</p>
+      </div>
+    </footer>
+
+    <div class="quick-access" aria-live="polite">
+      <button class="tiger-button" type="button" aria-label="打开快速访问菜单" aria-expanded="false">
+        <svg viewBox="0 0 120 120" aria-hidden="true">
+          <circle cx="30" cy="32" r="15" fill="#f7c57d" />
+          <circle cx="90" cy="32" r="15" fill="#f7c57d" />
+          <ellipse cx="60" cy="64" rx="44" ry="40" fill="#f5a34e" />
+          <ellipse cx="45" cy="62" rx="5" ry="7" fill="#2b1c14" />
+          <ellipse cx="75" cy="62" rx="5" ry="7" fill="#2b1c14" />
+          <path d="M52 70Q60 78 68 70" stroke="#2b1c14" stroke-width="2.5" stroke-linecap="round" fill="none" />
+        </svg>
+      </button>
+      <div class="quick-panel" role="menu" aria-label="快捷入口">
+        <a href="index.html" role="menuitem">首页</a>
+        <a href="analysis.html" role="menuitem">笔记</a>
+        <a href="projects.html" role="menuitem">捣鼓</a>
+        <a href="blog.html" role="menuitem">播客</a>
+        <a href="contact.html" role="menuitem">联系</a>
+      </div>
+    </div>
+
+    <script src="assets/site.js"></script>
+  </body>
+</html>
