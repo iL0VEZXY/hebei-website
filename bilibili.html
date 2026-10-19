@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>B站 | 河北的工作小站</title>
+    <meta name="description" content="B站作品、频道内容和个人成长记录。" />
+    <link rel="stylesheet" href="assets/css/site.css" />
+  </head>
+  <body>
+    <canvas id="bg-canvas" aria-hidden="true"></canvas>
+
+    <div class="page-shell">
+      <header class="topbar glass-panel">
+        <nav class="nav" aria-label="主导航">
+          <a class="brand" href="index.html" aria-label="返回首页">
+            <svg class="toolbox-icon" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M4 8.5 12 4l8 4.5v7L12 20l-8-4.5v-7Z" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/>
+              <path d="M4 8.5 12 13l8-4.5M12 13v7" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <span>首页</span>
+          </a>
+          <button class="nav-toggle" aria-label="打开菜单" aria-expanded="false">
+            <span></span><span></span><span></span>
+          </button>
+          <div class="nav-menu">
+            <a href="index.html">首页</a>
+            <a href="analysis.html">热分析</a>
+            <a href="tinkering.html">倒腾日记</a>
+            <a href="podcast.html">播客</a>
+            <a href="bilibili.html" class="active">B站</a>
+            <a href="about.html">关于我</a>
+            <a href="contact.html">联系</a>
+          </div>
+        </nav>
+      </header>
+
+      <main class="content">
+        <div class="page-header">
+          <div>
+            <p class="eyebrow">频道与内容</p>
+            <h1 class="page-title">B站</h1>
+          </div>
+          <div class="page-nav" aria-label="页面导航">
+            <a href="#timeline">成长记录</a>
+            <a href="#channel">频道方向</a>
+          </div>
+        </div>
+
+        <section class="timeline" id="timeline">
+          <article class="timeline-item glass-panel">
+            <div class="card-kicker">2019</div>
+            <h2>起步阶段</h2>
+            <p>从最基础的内容记录和技术分享开始，慢慢理解什么内容适合持续做下去。</p>
+            <div class="meta"><span>平台记录</span><span>初期探索</span></div>
+          </article>
+
+          <article class="timeline-item glass-panel">
+            <div class="card-kicker">2020-2022</div>
+            <h2>稳定输出</h2>
+            <p>逐步形成一套更稳定的表达方式，持续在专业内容和个人风格之间寻找平衡。</p>
+            <div class="meta"><span>内容输出</span><span>持续迭代</span></div>
+          </article>
+
+          <article class="timeline-item glass-panel">
+            <div class="card-kicker">现在</div>
+            <h2>混合型创作</h2>
+            <p>既做技术、分析、记录，也做观察、生活和折腾故事，把内容做成一个更真实的个人工作室。</p>
+            <div class="meta"><span>频道方向</span><span>成长中</span></div>
+          </article>
+        </section>
+
+        <section class="page-card glass-panel" id="channel" style="margin-top: 20px;">
+          <div class="card-kicker">频道方向</div>
+          <h2>内容和价值</h2>
+          <p>以真实工作经验、工程视角和个人观察为核心，输出有用、有趣、值得留档的内容。</p>
+        </section>
+      </main>
+    </div>
+
+    <button class="tiger-float" type="button" aria-label="顾问 / 快速访问" aria-expanded="false">
+      <svg class="tiger-icon" viewBox="0 0 128 128" aria-hidden="true">
+        <defs>
+          <linearGradient id="tigerBg5" x1="0" x2="1">
+            <stop offset="0%" stop-color="#f8dcb2" />
+            <stop offset="60%" stop-color="#f0b06a" />
+            <stop offset="100%" stop-color="#d68845" />
+          </linearGradient>
+        </defs>
+        <circle cx="64" cy="64" r="52" fill="url(#tigerBg5)" stroke="rgba(255,255,255,0.5)" stroke-width="3"/>
+        <path d="M42 58c0-18 11-30 22-30 17 0 30 11 30 29 0 13-7 21-15 24l-7 1-4 11-12-1-3-10-8-1c-7-1-12-9-12-13Z" fill="#f5d58d" opacity="0.78"/>
+        <path d="M52 54c5-14 26-17 36-4 5 6 4 18-3 24-10 9-29 5-35-11-1-3-1-6 2-9Z" fill="#1a1d2b" opacity="0.9"/>
+        <path d="M63 42c8-9 33-7 39 7l-9 7-13-2-12-3-5-9Z" fill="#1a1d2b"/>
+        <path d="M39 45c-9-10-28-5-34 9l12 7 12-3 10-7Z" fill="#1a1d2b"/>
+        <path d="M54 70l-8 16 14 7 10-20-16-3Z" fill="#f8dcb2"/>
+        <path d="M72 71l9 15 15-8-9-16-15 9Z" fill="#f8dcb2"/>
+        <path d="M48 80h32l7 18H41l7-18Z" fill="#111827"/>
+        <circle cx="52" cy="65" r="4.5" fill="#111827"/>
+        <circle cx="76" cy="65" r="4.5" fill="#111827"/>
+        <path d="M58 75c3 4 9 4 12 0" fill="none" stroke="#111827" stroke-width="3" stroke-linecap="round"/>
+        <path d="M46 33l11 6" fill="none" stroke="#f9f1df" stroke-width="4" stroke-linecap="round"/>
+        <path d="M82 33l-11 6" fill="none" stroke="#f9f1df" stroke-width="4" stroke-linecap="round"/>
+      </svg>
+    </button>
+
+    <aside class="quick-access-panel glass-panel" aria-label="快捷访问菜单" aria-hidden="true">
+      <div class="panel-header">
+        <div>
+          <p>顾问</p>
+          <h3>快速访问</h3>
+        </div>
+        <button class="close-panel" type="button" aria-label="关闭快捷菜单">×</button>
+      </div>
+      <nav class="quick-links">
+        <a href="index.html">首页</a>
+        <a href="analysis.html">分析</a>
+        <a href="tinkering.html">倒腾日记</a>
+        <a href="podcast.html">播客</a>
+        <a href="bilibili.html">B站</a>
+        <a href="about.html">关于我</a>
+        <a href="contact.html">联系</a>
+      </nav>
+    </aside>
+
+    <script src="assets/js/site.js"></script>
+  </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

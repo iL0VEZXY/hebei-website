@@ -1,121 +1,627 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="zh-CN">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
-  <title>何北 · 首页</title>
-  <link rel="stylesheet" href="/assets/style.css">
-</head>
-<body>
-  <div id="bg-root"></div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>河北的工作小站</title>
+    <meta
+      name="description"
+      content="热分析工程师的日常，做分析、做折腾、做播客，也做一点生活和实验。"
+    />
+    <link rel="stylesheet" href="assets/css/site.css" />
+  </head>
+  <body>
+    <canvas id="bg-canvas" aria-hidden="true"></canvas>
 
-  <header class="site-nav" role="navigation">
-    <div class="nav-inner container">
-      <a class="brand" href="/index.html" aria-label="首页">首页</a>
-      <nav class="links" aria-label="主导航">
-        <a href="/thermal.html">分析仪器</a>
-        <a href="/projects.html">捣鼓</a>
-        <a href="/podcast.html">播客</a>
-        <a href="/bsite.html">B站</a>
-        <a href="#about" class="about-link">关于我</a>
-        <a href="/contact.html">联系</a>
-      </nav>
-      <button class="nav-toggle" aria-label="打开导航" aria-expanded="false">☰</button>
+    <div class="page-shell">
+      <header class="topbar glass-panel">
+        <nav class="nav" aria-label="主导航">
+          <a class="brand" href="index.html" aria-label="返回首页">
+            <svg class="toolbox-icon" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M4 8.5 12 4l8 4.5v7L12 20l-8-4.5v-7Z" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/>
+              <path d="M4 8.5 12 13l8-4.5M12 13v7" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <span>首页</span>
+          </a>
+
+          <button class="nav-toggle" aria-label="打开菜单" aria-expanded="false">
+            <span></span><span></span><span></span>
+          </button>
+
+          <div class="nav-menu">
+            <a href="analysis.html">热分析</a>
+            <a href="tinkering.html">倒腾日记</a>
+            <a href="podcast.html">播客</a>
+            <a href="bilibili.html">B站</a>
+            <a href="about.html">关于我</a>
+            <a href="contact.html">联系</a>
+          </div>
+        </nav>
+      </header>
+
+      <main class="content">
+        <section class="hero glass-panel">
+          <div class="hero-copy">
+            <p class="eyebrow">工作站 / 个人实验室</p>
+            <h1>河北的工作小站</h1>
+            <p class="lead">
+              作为一名B站UP主，我日常是个正经的热分析工程师，私下是个不太正经的有趣灵魂。
+            </p>
+            <p class="subtitle">「熱分析エンジニアの日常」</p>
+            <div class="cta-row">
+              <a class="primary-btn" href="analysis.html">看分析</a>
+              <a class="secondary-btn" href="tinkering.html">看看折腾</a>
+            </div>
+          </div>
+
+          <div class="hero-card glass-panel nested">
+            <div class="mini-badge">个人概览</div>
+            <ul class="overview-list">
+              <li><span>方向</span><strong>热分析 / 工程 / 个人播客</strong></li>
+              <li><span>状态</span><strong>持续迭代中</strong></li>
+              <li><span>关键词</span><strong>实验 / 记录 / 产出</strong></li>
+            </ul>
+          </div>
+        </section>
+
+        <section class="feature-grid">
+          <article class="info-card glass-panel">
+            <div class="card-kicker">自我介绍</div>
+            <h2>关于我</h2>
+            <p>
+              我是一个喜欢拆解机器、理解机制、记录过程的人。日常做热分析，晚上会写代码、做小实验、拍视频、记录日常琐碎。
+            </p>
+            <a href="about.html">了解更多 →</a>
+          </article>
+
+          <article class="info-card glass-panel">
+            <div class="card-kicker">分析笔记</div>
+            <h2>分析 / 笔记</h2>
+            <p>
+              这里会放结论、分析思路、方法取舍，以及一些偏工程的记录，方便以后回头复盘。
+            </p>
+            <a href="analysis.html">打开笔记 →</a>
+          </article>
+
+          <article class="info-card glass-panel">
+            <div class="card-kicker">倒腾日记</div>
+            <h2>捣鼓页</h2>
+            <p>
+              这是我的试验场：做小工具、写小游戏、打磨界面、尝试一些没什么必要但很有意思的东西。
+            </p>
+            <a href="tinkering.html">去看看 →</a>
+          </article>
+        </section>
+
+        <section class="split-section">
+          <article class="glass-panel panel-block">
+            <div class="section-head">
+              <span class="pill">笔记入口</span>
+              <h3>工作笔记</h3>
+            </div>
+            <div class="link-list">
+              <a href="analysis.html#notes">热分析工作记录</a>
+              <a href="tinkering.html#log">折腾与复盘</a>
+              <a href="podcast.html">录音 / 访谈记录</a>
+            </div>
+          </article>
+
+          <article class="glass-panel panel-block">
+            <div class="section-head">
+              <span class="pill">我的频道</span>
+              <h3>B站</h3>
+            </div>
+            <div class="link-list">
+              <a href="bilibili.html">视频与节目</a>
+              <a href="about.html">人物简介</a>
+              <a href="contact.html">联系与合作</a>
+            </div>
+          </article>
+        </section>
+      </main>
     </div>
-  </header>
 
-  <main class="container main">
-    <section class="hero">
-      <h1 class="hero-title">何北的工作小站</h1>
-      <p class="hero-lead">作为一名B站UP主，我日常是个正经的热分析工程师，私下是个不太正经的有趣灵魂。</p>
-      <p class="hero-sub">「熱分析エンジニアの日常」</p>
+    <button class="tiger-float" type="button" aria-label="顾问 / 快速访问" aria-expanded="false">
+      <svg class="tiger-icon" viewBox="0 0 128 128" aria-hidden="true">
+        <defs>
+          <linearGradient id="tigerBg" x1="0" x2="1">
+            <stop offset="0%" stop-color="#f8dcb2" />
+            <stop offset="60%" stop-color="#f0b06a" />
+            <stop offset="100%" stop-color="#d68845" />
+          </linearGradient>
+        </defs>
+        <circle cx="64" cy="64" r="52" fill="url(#tigerBg)" stroke="rgba(255,255,255,0.5)" stroke-width="3"/>
+        <path d="M42 58c0-18 11-30 22-30 17 0 30 11 30 29 0 13-7 21-15 24l-7 1-4 11-12-1-3-10-8-1c-7-1-12-9-12-13Z" fill="#f5d58d" opacity="0.78"/>
+        <path d="M52 54c5-14 26-17 36-4 5 6 4 18-3 24-10 9-29 5-35-11-1-3-1-6 2-9Z" fill="#1a1d2b" opacity="0.9"/>
+        <path d="M63 42c8-9 33-7 39 7l-9 7-13-2-12-3-5-9Z" fill="#1a1d2b"/>
+        <path d="M39 45c-9-10-28-5-34 9l12 7 12-3 10-7Z" fill="#1a1d2b"/>
+        <path d="M54 70l-8 16 14 7 10-20-16-3Z" fill="#f8dcb2"/>
+        <path d="M72 71l9 15 15-8-9-16-15 9Z" fill="#f8dcb2"/>
+        <path d="M48 80h32l7 18H41l7-18Z" fill="#111827"/>
+        <circle cx="52" cy="65" r="4.5" fill="#111827"/>
+        <circle cx="76" cy="65" r="4.5" fill="#111827"/>
+        <path d="M58 75c3 4 9 4 12 0" fill="none" stroke="#111827" stroke-width="3" stroke-linecap="round"/>
+        <path d="M46 33l11 6" fill="none" stroke="#f9f1df" stroke-width="4" stroke-linecap="round"/>
+        <path d="M82 33l-11 6" fill="none" stroke="#f9f1df" stroke-width="4" stroke-linecap="round"/>
+      </svg>
+    </button>
 
-      <div class="cards">
-        <a class="card" href="/thermal.html">
-          <strong>热分析笔记</strong>
-          <span>STA / DSC / TGA / DMA 等实用笔记</span>
-        </a>
-
-        <a class="card" href="/projects.html">
-          <strong>捣鼓日记</strong>
-          <span>工具、小项目与小游戏（含俄罗斯方块）</span>
-        </a>
-
-        <a class="card" href="/podcast.html">
-          <strong>播客</strong>
-          <span>聊工作、生活与旅行</span>
-        </a>
-
-        <a class="card" href="/bsite.html">
-          <strong>B站</strong>
-          <span>我的视频频道与更新</span>
-        </a>
+    <aside class="quick-access-panel glass-panel" aria-label="快捷访问菜单" aria-hidden="true">
+      <div class="panel-header">
+        <div>
+          <p>顾问</p>
+          <h3>快速访问</h3>
+        </div>
+        <button class="close-panel" type="button" aria-label="关闭快捷菜单">×</button>
       </div>
-    </section>
+      <nav class="quick-links">
+        <a href="index.html">首页</a>
+        <a href="analysis.html">分析</a>
+        <a href="tinkering.html">倒腾日记</a>
+        <a href="podcast.html">播客</a>
+        <a href="bilibili.html">B站</a>
+        <a href="about.html">关于我</a>
+        <a href="contact.html">联系</a>
+      </nav>
+    </aside>
 
-    <section id="about" class="about">
-      <h2>关于我</h2>
-      <p>嗨，我是何北，在上海做热分析应用。工作以外会做视频和一些小项目，喜欢把技术讲清楚，也喜欢写点好玩的东西。</p>
-    </section>
-  </main>
-
-  <!-- Tiger quick access -->
-  <div id="tiger" class="tiger" role="button" tabindex="0" aria-label="顾问 / 快速访问" aria-haspopup="true" aria-expanded="false">
-    <!-- geometric tiger SVG (minimal, professional) -->
-    <svg viewBox="0 0 64 64" width="56" height="56" aria-hidden="true">
-      <defs>
-        <linearGradient id="tg" x1="0" y1="0" x2="1" y2="1">
-          <stop offset="0" stop-color="#7C5CFF" />
-          <stop offset="1" stop-color="#2FE5CC" />
-        </linearGradient>
-      </defs>
-      <circle cx="32" cy="32" r="30" fill="url(#tg)" opacity="0.98" />
-      <g transform="translate(8,8) scale(0.8)" fill="#0B0B10">
-        <path d="M16 6 L24 6 L28 12 L24 18 L16 18 L12 12 Z" opacity="0.98" />
-        <path d="M6 20 L58 20 L52 48 L12 48 Z" />
-        <path d="M18 30 L26 30" stroke="#7C5CFF" stroke-width="2" stroke-linecap="round" opacity="0.9" />
-        <path d="M38 30 L46 30" stroke="#2FE5CC" stroke-width="2" stroke-linecap="round" opacity="0.9" />
-      </g>
-    </svg>
-    <span class="tiger-label">顾问 / 快速访问</span>
-  </div>
-
-  <div id="tiger-drawer" class="tiger-drawer" aria-hidden="true">
-    <button class="close" aria-label="关闭">×</button>
-    <ul>
-      <li><a href="/thermal.html">分析仪器</a></li>
-      <li><a href="/projects.html">捣鼓</a></li>
-      <li><a href="/podcast.html">播客</a></li>
-      <li><a href="/bsite.html">B站</a></li>
-      <li><a href="/contact.html">联系</a></li>
-    </ul>
-  </div>
-
-  <script src="/assets/bg.js"></script>
-  <script>
-    // nav toggle
-    (function(){
-      const btn = document.querySelector('.nav-toggle');
-      const links = document.querySelector('.links');
-      btn.addEventListener('click', ()=>{
-        const expanded = btn.getAttribute('aria-expanded') === 'true';
-        btn.setAttribute('aria-expanded', String(!expanded));
-        links.classList.toggle('open');
-      });
-    })();
-
-    // tiger drawer
-    (function(){
-      const tiger = document.getElementById('tiger');
-      const drawer = document.getElementById('tiger-drawer');
-      const closeBtn = drawer.querySelector('.close');
-      function open(){ drawer.setAttribute('aria-hidden','false'); tiger.setAttribute('aria-expanded','true'); drawer.classList.add('open'); }
-      function close(){ drawer.setAttribute('aria-hidden','true'); tiger.setAttribute('aria-expanded','false'); drawer.classList.remove('open'); }
-      tiger.addEventListener('click', ()=>{ if(drawer.classList.contains('open')) close(); else open(); });
-      tiger.addEventListener('keydown', (e)=>{ if(e.key==='Enter'||e.key===' ') { e.preventDefault(); tiger.click(); } });
-      closeBtn.addEventListener('click', close);
-      document.addEventListener('keydown', (e)=>{ if(e.key==='Escape') close(); });
-    })();
-  </script>
-</body>
+    <script src="assets/js/site.js"></script>
+  </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

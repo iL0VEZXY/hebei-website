@@ -3,103 +3,288 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>热分析笔记</title>
-    <meta name="description" content="热分析笔记与应用基础资料索引。" />
-    <link rel="stylesheet" href="assets/styles.css" />
+    <title>热分析 | 河北的工作小站</title>
+    <meta name="description" content="热分析、工程记录和个人笔记集合。" />
+    <link rel="stylesheet" href="assets/css/site.css" />
   </head>
-  <body data-page="analysis">
-    <div class="bg-layer"></div>
-    <header class="site-header">
-      <nav class="nav" aria-label="主导航">
-        <a class="brand" href="index.html" aria-label="返回首页">
-          <span class="brand-mark" aria-hidden="true">
-            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 7.5A2.5 2.5 0 0 1 7.5 5h9A2.5 2.5 0 0 1 19 7.5v9A2.5 2.5 0 0 1 16.5 19h-9A2.5 2.5 0 0 1 5 16.5v-9Zm3.2 3.3h7.6M8 16.5h8M9.5 5v3m5-3v3" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          </span>
-          <span>何北的工作小站</span>
-        </a>
-        <button class="nav-toggle" type="button" aria-label="展开导航" aria-expanded="false"><span></span><span></span><span></span></button>
-        <div class="nav-links">
-          <a href="index.html" data-nav="home">首页</a>
-          <a href="analysis.html" data-nav="analysis">分析</a>
-          <a href="projects.html" data-nav="projects">捣鼓</a>
-          <a href="blog.html" data-nav="blog">博客</a>
-          <a href="experience.html" data-nav="experience">经历</a>
-          <a href="contact.html" data-nav="contact">联系</a>
-        </div>
-      </nav>
-    </header>
+  <body>
+    <canvas id="bg-canvas" aria-hidden="true"></canvas>
 
-    <main class="page-shell content-page">
-      <section class="section-shell">
+    <div class="page-shell">
+      <header class="topbar glass-panel">
+        <nav class="nav" aria-label="主导航">
+          <a class="brand" href="index.html" aria-label="返回首页">
+            <svg class="toolbox-icon" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M4 8.5 12 4l8 4.5v7L12 20l-8-4.5v-7Z" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/>
+              <path d="M4 8.5 12 13l8-4.5M12 13v7" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <span>首页</span>
+          </a>
+          <button class="nav-toggle" aria-label="打开菜单" aria-expanded="false">
+            <span></span><span></span><span></span>
+          </button>
+          <div class="nav-menu">
+            <a href="index.html">首页</a>
+            <a href="analysis.html" class="active">热分析</a>
+            <a href="tinkering.html">倒腾日记</a>
+            <a href="podcast.html">播客</a>
+            <a href="bilibili.html">B站</a>
+            <a href="about.html">关于我</a>
+            <a href="contact.html">联系</a>
+          </div>
+        </nav>
+      </header>
+
+      <main class="content">
         <div class="page-header">
-          <p class="eyebrow">专业笔记</p>
-          <h1>热分析笔记</h1>
-          <p>记录工作中的基础、方法与实践注意事项，方便自己回顾，也希望能帮助同学们一点点积累。</p>
+          <div>
+            <p class="eyebrow">研究与记录</p>
+            <h1 class="page-title">热分析</h1>
+          </div>
+          <div class="page-nav" aria-label="页面导航">
+            <a href="#notes">笔记</a>
+            <a href="#methods">方法</a>
+            <a href="#tools">设备</a>
+          </div>
         </div>
-      </section>
 
-      <section class="section-shell">
-        <div class="note-grid">
-          <article class="glass-card note-card">
-            <div class="note-top"><span class="note-index">01</span><span class="tag">STA</span></div>
-            <h2>STA 同步热分析</h2>
-            <p>同时记录质量变化和热流信号，适用于分解、氧化、吸附等过程的联动分析。</p>
+        <section class="page-grid">
+          <article class="page-card glass-panel" id="notes">
+            <div class="card-kicker">笔记入口</div>
+            <h2>工作与复盘记录</h2>
+            <p>记录真实问题、方法取舍、实验过程和结论，方便之后回看和反思。</p>
+            <ul>
+              <li>样品状态与材料变化的观察</li>
+              <li>升温速率、气氛和载气流量对结果的影响</li>
+              <li>峰位、峰面积和失重曲线的对照解读</li>
+              <li>实验复现、异常排查和数据清洗</li>
+            </ul>
           </article>
-          <article class="glass-card note-card">
-            <div class="note-top"><span class="note-index">02</span><span class="tag">DSC</span></div>
-            <h2>DSC 差示扫描量热</h2>
-            <p>用于判定 Tg、熔融、结晶与相变行为，关注热流峰形和基线稳定性。</p>
-          </article>
-          <article class="glass-card note-card">
-            <div class="note-top"><span class="note-index">03</span><span class="tag">TGA</span></div>
-            <h2>TGA 热重分析</h2>
-            <p>用质量变化判断挥发、分解和热稳定性；气氛和升温速率对结果影响很大。</p>
-          </article>
-          <article class="glass-card note-card">
-            <div class="note-top"><span class="note-index">04</span><span class="tag">DMA</span></div>
-            <h2>DMA 动态机械分析</h2>
-            <p>通过振动施加方式测量模量和损耗，常用于温度扫描和 Tg 判定。</p>
-          </article>
-          <article class="glass-card note-card">
-            <div class="note-top"><span class="note-index">05</span><span class="tag">TMA</span></div>
-            <h2>TMA 热机械分析</h2>
-            <p>测量热膨胀、软化和线性热膨胀系数，夹具和样品状态都很关键。</p>
-          </article>
-          <article class="glass-card note-card">
-            <div class="note-top"><span class="note-index">06</span><span class="tag">样品</span></div>
-            <h2>样品制备常见坑</h2>
-            <p>称量、装样、基底、升温速率以及试验气氛都可能影响结果，需要细心复核。</p>
-          </article>
-        </div>
-      </section>
-    </main>
 
-    <footer class="site-footer">
-      <div class="footer-inner">
-        <p>© 2026 何北 · 用热爱构建生活</p>
-      </div>
-    </footer>
+          <article class="page-card glass-panel" id="methods">
+            <div class="card-kicker">方法</div>
+            <h2>分析思路</h2>
+            <p>热分析不是单纯做曲线，而是把温度、时间、过程机制和设备限制都放进同一张图里看。</p>
+            <ul>
+              <li>先看基线，再看材料行为和反应窗口</li>
+              <li>做对照组，确认是不是仪器噪声或样品问题</li>
+              <li>结合失重、吸附、相变和表征手段综合判断</li>
+            </ul>
+          </article>
 
-    <div class="quick-access" aria-live="polite">
-      <button class="tiger-button" type="button" aria-label="打开快速访问菜单" aria-expanded="false">
-        <svg viewBox="0 0 120 120" aria-hidden="true">
-          <circle cx="30" cy="32" r="15" fill="#f7c57d" />
-          <circle cx="90" cy="32" r="15" fill="#f7c57d" />
-          <ellipse cx="60" cy="64" rx="44" ry="40" fill="#f5a34e" />
-          <ellipse cx="45" cy="62" rx="5" ry="7" fill="#2b1c14" />
-          <ellipse cx="75" cy="62" rx="5" ry="7" fill="#2b1c14" />
-          <path d="M52 70Q60 78 68 70" stroke="#2b1c14" stroke-width="2.5" stroke-linecap="round" fill="none" />
-        </svg>
-      </button>
-      <div class="quick-panel" role="menu" aria-label="快捷入口">
-        <a href="index.html" role="menuitem">首页</a>
-        <a href="analysis.html" role="menuitem">笔记</a>
-        <a href="projects.html" role="menuitem">捣鼓</a>
-        <a href="blog.html" role="menuitem">播客</a>
-        <a href="contact.html" role="menuitem">联系</a>
-      </div>
+          <article class="page-card glass-panel" id="tools">
+            <div class="card-kicker">设备</div>
+            <h2>常用工具</h2>
+            <p>热分析工作日常会不断迭代：从数据到软件设置，从报告到复盘，工具能省很多重复劳动。</p>
+            <ul>
+              <li>不同程序的升温段设置和气路切换</li>
+              <li>基线校正与峰面积计算</li>
+              <li>实验记录模板、结果归档和版本追踪</li>
+            </ul>
+          </article>
+
+          <article class="page-card glass-panel">
+            <div class="card-kicker">更新</div>
+            <h2>最近在做</h2>
+            <p>继续把实验记录、工具链和个人站点内容串起来，整理实用的思维框架和一批可复用的页面。</p>
+            <ul>
+              <li>升级站点导航和卡片结构</li>
+              <li>补充折腾记录与小游戏页面</li>
+              <li>优化移动端交互和视觉细节</li>
+            </ul>
+          </article>
+        </section>
+      </main>
     </div>
 
-    <script src="assets/site.js"></script>
+    <button class="tiger-float" type="button" aria-label="顾问 / 快速访问" aria-expanded="false">
+      <svg class="tiger-icon" viewBox="0 0 128 128" aria-hidden="true">
+        <defs>
+          <linearGradient id="tigerBg2" x1="0" x2="1">
+            <stop offset="0%" stop-color="#f8dcb2" />
+            <stop offset="60%" stop-color="#f0b06a" />
+            <stop offset="100%" stop-color="#d68845" />
+          </linearGradient>
+        </defs>
+        <circle cx="64" cy="64" r="52" fill="url(#tigerBg2)" stroke="rgba(255,255,255,0.5)" stroke-width="3"/>
+        <path d="M42 58c0-18 11-30 22-30 17 0 30 11 30 29 0 13-7 21-15 24l-7 1-4 11-12-1-3-10-8-1c-7-1-12-9-12-13Z" fill="#f5d58d" opacity="0.78"/>
+        <path d="M52 54c5-14 26-17 36-4 5 6 4 18-3 24-10 9-29 5-35-11-1-3-1-6 2-9Z" fill="#1a1d2b" opacity="0.9"/>
+        <path d="M63 42c8-9 33-7 39 7l-9 7-13-2-12-3-5-9Z" fill="#1a1d2b"/>
+        <path d="M39 45c-9-10-28-5-34 9l12 7 12-3 10-7Z" fill="#1a1d2b"/>
+        <path d="M54 70l-8 16 14 7 10-20-16-3Z" fill="#f8dcb2"/>
+        <path d="M72 71l9 15 15-8-9-16-15 9Z" fill="#f8dcb2"/>
+        <path d="M48 80h32l7 18H41l7-18Z" fill="#111827"/>
+        <circle cx="52" cy="65" r="4.5" fill="#111827"/>
+        <circle cx="76" cy="65" r="4.5" fill="#111827"/>
+        <path d="M58 75c3 4 9 4 12 0" fill="none" stroke="#111827" stroke-width="3" stroke-linecap="round"/>
+        <path d="M46 33l11 6" fill="none" stroke="#f9f1df" stroke-width="4" stroke-linecap="round"/>
+        <path d="M82 33l-11 6" fill="none" stroke="#f9f1df" stroke-width="4" stroke-linecap="round"/>
+      </svg>
+    </button>
+
+    <aside class="quick-access-panel glass-panel" aria-label="快捷访问菜单" aria-hidden="true">
+      <div class="panel-header">
+        <div>
+          <p>顾问</p>
+          <h3>快速访问</h3>
+        </div>
+        <button class="close-panel" type="button" aria-label="关闭快捷菜单">×</button>
+      </div>
+      <nav class="quick-links">
+        <a href="index.html">首页</a>
+        <a href="analysis.html">分析</a>
+        <a href="tinkering.html">倒腾日记</a>
+        <a href="podcast.html">播客</a>
+        <a href="bilibili.html">B站</a>
+        <a href="about.html">关于我</a>
+        <a href="contact.html">联系</a>
+      </nav>
+    </aside>
+
+    <script src="assets/js/site.js"></script>
   </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

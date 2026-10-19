@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>倒腾日记 | 河北的工作小站</title>
+    <meta name="description" content="项目、实验和折腾记录，是我的个人日记页。" />
+    <link rel="stylesheet" href="assets/css/site.css" />
+  </head>
+  <body>
+    <canvas id="bg-canvas" aria-hidden="true"></canvas>
+
+    <div class="page-shell">
+      <header class="topbar glass-panel">
+        <nav class="nav" aria-label="主导航">
+          <a class="brand" href="index.html" aria-label="返回首页">
+            <svg class="toolbox-icon" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M4 8.5 12 4l8 4.5v7L12 20l-8-4.5v-7Z" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/>
+              <path d="M4 8.5 12 13l8-4.5M12 13v7" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <span>首页</span>
+          </a>
+          <button class="nav-toggle" aria-label="打开菜单" aria-expanded="false">
+            <span></span><span></span><span></span>
+          </button>
+          <div class="nav-menu">
+            <a href="index.html">首页</a>
+            <a href="analysis.html">热分析</a>
+            <a href="tinkering.html" class="active">倒腾日记</a>
+            <a href="podcast.html">播客</a>
+            <a href="bilibili.html">B站</a>
+            <a href="about.html">关于我</a>
+            <a href="contact.html">联系</a>
+          </div>
+        </nav>
+      </header>
+
+      <main class="content">
+        <div class="page-header">
+          <div>
+            <p class="eyebrow">实验场 / 记录本</p>
+            <h1 class="page-title">倒腾日记</h1>
+          </div>
+          <div class="page-nav" aria-label="页面导航">
+            <a href="#log">日志</a>
+            <a href="#games">小游戏</a>
+            <a href="games/index.html">游戏列表</a>
+          </div>
+        </div>
+
+        <section class="page-grid" id="log">
+          <article class="page-card glass-panel">
+            <div class="card-kicker">最近折腾</div>
+            <h2>实验与工具</h2>
+            <p>这是一个混合记录：代码、界面、工具、方案和小小的失败经验。</p>
+            <ul>
+              <li>把站点结构从单页拆成多页，并持续收敛风险</li>
+              <li>把导览、局部写作和互动部件拆开去做</li>
+              <li>保留个性设计，同时把信息层次做清楚</li>
+            </ul>
+          </article>
+
+          <article class="page-card glass-panel">
+            <div class="card-kicker">思路</div>
+            <h2>对做事的感觉</h2>
+            <p>很多时候没必要把一个小东西做得无比“正式”，有意思、好玩、能持续迭代，才是最重要的。</p>
+            <ul>
+              <li>快速验证一个想法比定稿更有价值</li>
+              <li>小工具和小游戏是最好的学习方式</li>
+              <li>反复迭代，文档和产品一起长起来</li>
+            </ul>
+          </article>
+        </section>
+
+        <section class="page-card glass-panel" style="margin-top: 20px;" id="games">
+          <div class="card-kicker">自制游戏</div>
+          <h2>小游戏 / 俄罗斯方块</h2>
+          <p>这里是未来游戏入口的容器，方便后续加入更多作品。现在先放上俄罗斯方块，保证可玩、可扩展、可继续接入。</p>
+          <div class="cta-row" style="margin-top: 18px;">
+            <a class="primary-btn" href="games/tetris.html">开始游玩</a>
+            <a class="secondary-btn" href="games/index.html">游戏列表</a>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <button class="tiger-float" type="button" aria-label="顾问 / 快速访问" aria-expanded="false">
+      <svg class="tiger-icon" viewBox="0 0 128 128" aria-hidden="true">
+        <defs>
+          <linearGradient id="tigerBg3" x1="0" x2="1">
+            <stop offset="0%" stop-color="#f8dcb2" />
+            <stop offset="60%" stop-color="#f0b06a" />
+            <stop offset="100%" stop-color="#d68845" />
+          </linearGradient>
+        </defs>
+        <circle cx="64" cy="64" r="52" fill="url(#tigerBg3)" stroke="rgba(255,255,255,0.5)" stroke-width="3"/>
+        <path d="M42 58c0-18 11-30 22-30 17 0 30 11 30 29 0 13-7 21-15 24l-7 1-4 11-12-1-3-10-8-1c-7-1-12-9-12-13Z" fill="#f5d58d" opacity="0.78"/>
+        <path d="M52 54c5-14 26-17 36-4 5 6 4 18-3 24-10 9-29 5-35-11-1-3-1-6 2-9Z" fill="#1a1d2b" opacity="0.9"/>
+        <path d="M63 42c8-9 33-7 39 7l-9 7-13-2-12-3-5-9Z" fill="#1a1d2b"/>
+        <path d="M39 45c-9-10-28-5-34 9l12 7 12-3 10-7Z" fill="#1a1d2b"/>
+        <path d="M54 70l-8 16 14 7 10-20-16-3Z" fill="#f8dcb2"/>
+        <path d="M72 71l9 15 15-8-9-16-15 9Z" fill="#f8dcb2"/>
+        <path d="M48 80h32l7 18H41l7-18Z" fill="#111827"/>
+        <circle cx="52" cy="65" r="4.5" fill="#111827"/>
+        <circle cx="76" cy="65" r="4.5" fill="#111827"/>
+        <path d="M58 75c3 4 9 4 12 0" fill="none" stroke="#111827" stroke-width="3" stroke-linecap="round"/>
+        <path d="M46 33l11 6" fill="none" stroke="#f9f1df" stroke-width="4" stroke-linecap="round"/>
+        <path d="M82 33l-11 6" fill="none" stroke="#f9f1df" stroke-width="4" stroke-linecap="round"/>
+      </svg>
+    </button>
+
+    <aside class="quick-access-panel glass-panel" aria-label="快捷访问菜单" aria-hidden="true">
+      <div class="panel-header">
+        <div>
+          <p>顾问</p>
+          <h3>快速访问</h3>
+        </div>
+        <button class="close-panel" type="button" aria-label="关闭快捷菜单">×</button>
+      </div>
+      <nav class="quick-links">
+        <a href="index.html">首页</a>
+        <a href="analysis.html">分析</a>
+        <a href="tinkering.html">倒腾日记</a>
+        <a href="podcast.html">播客</a>
+        <a href="bilibili.html">B站</a>
+        <a href="about.html">关于我</a>
+        <a href="contact.html">联系</a>
+      </nav>
+    </aside>
+
+    <script src="assets/js/site.js"></script>
+  </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
