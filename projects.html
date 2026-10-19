@@ -1,113 +1,28 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="zh-CN">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>捣鼓日记</title>
-    <meta name="description" content="捣鼓日记、小游戏与折腾记录。" />
-    <link rel="stylesheet" href="assets/styles.css" />
-  </head>
-  <body data-page="projects">
-    <div class="bg-layer"></div>
-    <header class="site-header">
-      <nav class="nav" aria-label="主导航">
-        <a class="brand" href="index.html" aria-label="返回首页">
-          <span class="brand-mark" aria-hidden="true">
-            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 7.5A2.5 2.5 0 0 1 7.5 5h9A2.5 2.5 0 0 1 19 7.5v9A2.5 2.5 0 0 1 16.5 19h-9A2.5 2.5 0 0 1 5 16.5v-9Zm3.2 3.3h7.6M8 16.5h8M9.5 5v3m5-3v3" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          </span>
-          <span>何北的工作小站</span>
-        </a>
-        <button class="nav-toggle" type="button" aria-label="展开导航" aria-expanded="false"><span></span><span></span><span></span></button>
-        <div class="nav-links">
-          <a href="index.html" data-nav="home">首页</a>
-          <a href="analysis.html" data-nav="analysis">分析</a>
-          <a href="projects.html" data-nav="projects">捣鼓</a>
-          <a href="blog.html" data-nav="blog">博客</a>
-          <a href="experience.html" data-nav="experience">经历</a>
-          <a href="contact.html" data-nav="contact">联系</a>
-        </div>
-      </nav>
-    </header>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+  <title>何北 · 捣鼓日记</title>
+  <link rel="stylesheet" href="/assets/style.css">
+</head>
+<body>
+  <div id="bg-root"></div>
+  <header class="site-nav"><div class="nav-inner container"><a class="brand" href="/index.html">首页</a><nav class="links"><a href="/thermal.html">分析仪器</a><a href="/projects.html" aria-current="page">捣鼓</a><a href="/podcast.html">播客</a><a href="/bsite.html">B站</a><a href="/contact.html">联系</a></nav><button class="nav-toggle" aria-label="打开导航">☰</button></div></header>
+  <main class="container main">
+    <h1>捣鼓日记</h1>
+    <p>工作之余做的一些小项目与实验。下面是小游戏区（俄罗斯方块已接入）。</p>
 
-    <main class="page-shell content-page">
-      <section class="section-shell">
-        <div class="page-header">
-          <p class="eyebrow">折腾记录</p>
-          <h1>捣鼓日记</h1>
-          <p>工作之余的小爱好、工具、小游戏和实验尝试，暂时没有特别宏大的目标，只想把好玩的事做出来。</p>
-        </div>
-      </section>
+    <section class="games">
+      <article class="game-card">
+        <h3>俄罗斯方块</h3>
+        <p>小制作：网页版俄罗斯方块（支持键盘与触控）。</p>
+        <p><a class="btn" href="/games/tetris/index.html">开始游玩</a></p>
+      </article>
 
-      <section class="section-shell project-grid">
-        <article class="glass-card project-card">
-          <h2>财经小工具</h2>
-          <p>基于公开行情接口做的小面板，看看大盘、板块资金流和热点分布。</p>
-          <span class="project-badge">链接待补充</span>
-        </article>
-        <article class="glass-card project-card">
-          <h2>我的游戏板块</h2>
-          <p>纯属自娱自乐的小制作与试玩记录，后续会继续扩展新的小游戏。</p>
-          <span class="project-badge">持续更新</span>
-        </article>
-        <article class="glass-card project-card">
-          <h2>B站游戏频道</h2>
-          <p>每周 2-3 次更新，主要记录游戏和日常，欢迎来看看。</p>
-          <a class="inline-link" href="https://space.bilibili.com/22828856" target="_blank" rel="noopener noreferrer">前往 B 站</a>
-        </article>
-        <article class="glass-card project-card">
-          <h2>个人工具栏</h2>
-          <p>热分析速查、材料速查、单位换算和小游戏集合，结构会持续扩容。</p>
-          <span class="project-badge">待补充</span>
-        </article>
-      </section>
-
-      <section class="section-shell game-section glass-card">
-        <div class="section-heading">
-          <span class="section-icon">◈</span>
-          <h2>小游戏 / 自制游戏</h2>
-        </div>
-        <div class="game-list">
-          <article class="game-card">
-            <div>
-              <span class="game-tag">Tetris</span>
-              <h3>俄罗斯方块</h3>
-            </div>
-            <p>经典手感，支持键盘和触控；桌面端与移动端均可游玩。</p>
-            <div class="game-actions">
-              <a class="primary-btn" href="games.html">查看列表</a>
-              <a class="secondary-btn" href="games/tetris.html">开始游玩</a>
-            </div>
-          </article>
-        </div>
-      </section>
-    </main>
-
-    <footer class="site-footer">
-      <div class="footer-inner">
-        <p>© 2026 何北 · 用热爱构建生活</p>
-      </div>
-    </footer>
-
-    <div class="quick-access" aria-live="polite">
-      <button class="tiger-button" type="button" aria-label="打开快速访问菜单" aria-expanded="false">
-        <svg viewBox="0 0 120 120" aria-hidden="true">
-          <circle cx="30" cy="32" r="15" fill="#f7c57d" />
-          <circle cx="90" cy="32" r="15" fill="#f7c57d" />
-          <ellipse cx="60" cy="64" rx="44" ry="40" fill="#f5a34e" />
-          <ellipse cx="45" cy="62" rx="5" ry="7" fill="#2b1c14" />
-          <ellipse cx="75" cy="62" rx="5" ry="7" fill="#2b1c14" />
-          <path d="M52 70Q60 78 68 70" stroke="#2b1c14" stroke-width="2.5" stroke-linecap="round" fill="none" />
-        </svg>
-      </button>
-      <div class="quick-panel" role="menu" aria-label="快捷入口">
-        <a href="index.html" role="menuitem">首页</a>
-        <a href="analysis.html" role="menuitem">笔记</a>
-        <a href="projects.html" role="menuitem">捣鼓</a>
-        <a href="blog.html" role="menuitem">播客</a>
-        <a href="contact.html" role="menuitem">联系</a>
-      </div>
-    </div>
-
-    <script src="assets/site.js"></script>
-  </body>
+      <!-- placeholder for future games -->
+    </section>
+  </main>
+  <script src="/assets/bg.js"></script>
+</body>
 </html>

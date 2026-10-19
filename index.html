@@ -1,516 +1,121 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="zh-CN">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>何北的工作小站</title>
-    <meta name="description" content="何北的工作小站，热分析工程师与个人内容站。" />
-    <link rel="stylesheet" href="assets/styles.css" />
-  </head>
-  <body data-page="home">
-    <div class="bg-layer"></div>
-    <header class="site-header">
-      <nav class="nav" aria-label="主导航">
-        <a class="brand" href="index.html" aria-label="返回首页">
-          <span class="brand-mark" aria-hidden="true">
-            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 7.5A2.5 2.5 0 0 1 7.5 5h9A2.5 2.5 0 0 1 19 7.5v9A2.5 2.5 0 0 1 16.5 19h-9A2.5 2.5 0 0 1 5 16.5v-9Zm3.2 3.3h7.6M8 16.5h8M9.5 5v3m5-3v3" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          </span>
-          <span>何北的工作小站</span>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+  <title>何北 · 首页</title>
+  <link rel="stylesheet" href="/assets/style.css">
+</head>
+<body>
+  <div id="bg-root"></div>
+
+  <header class="site-nav" role="navigation">
+    <div class="nav-inner container">
+      <a class="brand" href="/index.html" aria-label="首页">首页</a>
+      <nav class="links" aria-label="主导航">
+        <a href="/thermal.html">分析仪器</a>
+        <a href="/projects.html">捣鼓</a>
+        <a href="/podcast.html">播客</a>
+        <a href="/bsite.html">B站</a>
+        <a href="#about" class="about-link">关于我</a>
+        <a href="/contact.html">联系</a>
+      </nav>
+      <button class="nav-toggle" aria-label="打开导航" aria-expanded="false">☰</button>
+    </div>
+  </header>
+
+  <main class="container main">
+    <section class="hero">
+      <h1 class="hero-title">何北的工作小站</h1>
+      <p class="hero-lead">作为一名B站UP主，我日常是个正经的热分析工程师，私下是个不太正经的有趣灵魂。</p>
+      <p class="hero-sub">「熱分析エンジニアの日常」</p>
+
+      <div class="cards">
+        <a class="card" href="/thermal.html">
+          <strong>热分析笔记</strong>
+          <span>STA / DSC / TGA / DMA 等实用笔记</span>
         </a>
 
-        <button class="nav-toggle" type="button" aria-label="展开导航" aria-expanded="false">
-          <span></span><span></span><span></span>
-        </button>
+        <a class="card" href="/projects.html">
+          <strong>捣鼓日记</strong>
+          <span>工具、小项目与小游戏（含俄罗斯方块）</span>
+        </a>
 
-        <div class="nav-links">
-          <a href="index.html" data-nav="home">首页</a>
-          <a href="analysis.html" data-nav="analysis">分析</a>
-          <a href="projects.html" data-nav="projects">捣鼓</a>
-          <a href="blog.html" data-nav="blog">博客</a>
-          <a href="experience.html" data-nav="experience">经历</a>
-          <a href="contact.html" data-nav="contact">联系</a>
-        </div>
-      </nav>
-    </header>
+        <a class="card" href="/podcast.html">
+          <strong>播客</strong>
+          <span>聊工作、生活与旅行</span>
+        </a>
 
-    <main class="page-shell">
-      <section class="hero-panel">
-        <div class="hero-copy">
-          <p class="eyebrow">热分析工程师 · 折腾日常</p>
-          <h1>在上海，做热分析，也做生活。</h1>
-          <p class="lead">
-            我是何北，工作在上海日立分析仪器，日常在热分析领域做应用讲解、方法讨论和基础培训；
-            工作之外会更新 B 站内容、捣鼓小项目，并记录生活与学习。
-          </p>
-          <div class="hero-actions">
-            <a class="primary-btn" href="analysis.html">了解热分析</a>
-            <a class="secondary-btn" href="projects.html">看捣鼓日记</a>
-          </div>
-        </div>
-      </section>
-
-      <section class="section-shell intro-grid">
-        <article class="glass-card feature-card">
-          <div class="card-icon">
-            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 2h8v4l2 6a4 4 0 0 1-4 5H10a4 4 0 0 1-4-5l2-6V2Zm1 7h6M10 2v4m4-4v4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          </div>
-          <h2>热分析笔记</h2>
-          <p>STA、DSC、TGA、DMA、TMA 的基础理解与方法注意事项。</p>
-          <a href="analysis.html">进入分析页</a>
-        </article>
-
-        <article class="glass-card feature-card">
-          <div class="card-icon">
-            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 7h10v10H7zM10 10h4v4h-4z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          </div>
-          <h2>捣鼓日记</h2>
-          <p>财经小工具、网页小游戏、个人工具栏和日常实验记录。</p>
-          <a href="projects.html">查看项目</a>
-        </article>
-
-        <article class="glass-card feature-card">
-          <div class="card-icon">
-            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 18V8.5A1.5 1.5 0 0 1 6.5 7H12l2 2h3.5A1.5 1.5 0 0 1 19 10.5V18H5Zm0 0h14" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          </div>
-          <h2>博客 / 播客</h2>
-          <p>留学、生活、热分析和小内容的更新入口与索引。</p>
-          <a href="blog.html">浏览文章</a>
-        </article>
-      </section>
-
-      <section class="section-shell about-panel glass-card">
-        <div class="section-heading">
-          <span class="section-icon">✦</span>
-          <h2>关于我</h2>
-        </div>
-        <div class="about-copy">
-          <p>👋 嗨，我是何北，土生土长上海人。2017年赴日留学，在芝浦工业大学读材料工学科，2021年继续读硕士，2023年毕业回国。</p>
-          <p>🔬 现在在上海日立分析仪器做热分析应用工程师，日常和各种热分析仪器打交道，负责原理讲解、应用介绍、方法讨论和基础培训。</p>
-          <p>🎮 会一点日语，喜欢看动漫和比赛；篮球、足球和健身也都爱。工作之余会在 B 站每周更新几次视频，偶尔记录日本旅行和上海生活。</p>
-        </div>
-      </section>
-
-      <section class="section-shell">
-        <div class="section-heading">
-          <span class="section-icon">◎</span>
-          <h2>快速入口</h2>
-        </div>
-        <div class="quick-grid">
-          <a class="glass-card quick-item" href="analysis.html">
-            <span class="item-label">分析</span>
-            <strong>热分析笔记</strong>
-          </a>
-          <a class="glass-card quick-item" href="projects.html">
-            <span class="item-label">捣鼓</span>
-            <strong>折腾记录</strong>
-          </a>
-          <a class="glass-card quick-item" href="blog.html">
-            <span class="item-label">博客</span>
-            <strong>写作与播客</strong>
-          </a>
-          <a class="glass-card quick-item" href="contact.html">
-            <span class="item-label">联系</span>
-            <strong>直接联系我</strong>
-          </a>
-        </div>
-      </section>
-    </main>
-
-    <footer class="site-footer">
-      <div class="footer-inner">
-        <p>© 2026 何北 · 用热爱构建生活</p>
-        <div class="footer-links">
-          <a href="https://space.bilibili.com/22828856" target="_blank" rel="noopener noreferrer">B站</a>
-          <a href="mailto:hebei717@126.com">邮箱</a>
-          <a href="contact.html">联系</a>
-        </div>
+        <a class="card" href="/bsite.html">
+          <strong>B站</strong>
+          <span>我的视频频道与更新</span>
+        </a>
       </div>
-    </footer>
+    </section>
 
-    <div class="quick-access" aria-live="polite">
-      <button class="tiger-button" type="button" aria-label="打开快速访问菜单" aria-expanded="false">
-        <svg viewBox="0 0 120 120" aria-hidden="true">
-          <circle cx="30" cy="32" r="15" fill="#f7c57d" />
-          <circle cx="90" cy="32" r="15" fill="#f7c57d" />
-          <ellipse cx="60" cy="64" rx="44" ry="40" fill="#f5a34e" />
-          <ellipse cx="45" cy="62" rx="5" ry="7" fill="#2b1c14" />
-          <ellipse cx="75" cy="62" rx="5" ry="7" fill="#2b1c14" />
-          <path d="M52 70Q60 78 68 70" stroke="#2b1c14" stroke-width="2.5" stroke-linecap="round" fill="none" />
-        </svg>
-      </button>
-      <div class="quick-panel" role="menu" aria-label="快捷入口">
-        <a href="analysis.html" role="menuitem">笔记</a>
-        <a href="projects.html" role="menuitem">捣鼓</a>
-        <a href="blog.html" role="menuitem">播客</a>
-        <a href="experience.html" role="menuitem">经历</a>
-        <a href="contact.html" role="menuitem">联系</a>
-      </div>
-    </div>
+    <section id="about" class="about">
+      <h2>关于我</h2>
+      <p>嗨，我是何北，在上海做热分析应用。工作以外会做视频和一些小项目，喜欢把技术讲清楚，也喜欢写点好玩的东西。</p>
+    </section>
+  </main>
 
-    <script src="assets/site.js"></script>
-  </body>
+  <!-- Tiger quick access -->
+  <div id="tiger" class="tiger" role="button" tabindex="0" aria-label="顾问 / 快速访问" aria-haspopup="true" aria-expanded="false">
+    <!-- geometric tiger SVG (minimal, professional) -->
+    <svg viewBox="0 0 64 64" width="56" height="56" aria-hidden="true">
+      <defs>
+        <linearGradient id="tg" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0" stop-color="#7C5CFF" />
+          <stop offset="1" stop-color="#2FE5CC" />
+        </linearGradient>
+      </defs>
+      <circle cx="32" cy="32" r="30" fill="url(#tg)" opacity="0.98" />
+      <g transform="translate(8,8) scale(0.8)" fill="#0B0B10">
+        <path d="M16 6 L24 6 L28 12 L24 18 L16 18 L12 12 Z" opacity="0.98" />
+        <path d="M6 20 L58 20 L52 48 L12 48 Z" />
+        <path d="M18 30 L26 30" stroke="#7C5CFF" stroke-width="2" stroke-linecap="round" opacity="0.9" />
+        <path d="M38 30 L46 30" stroke="#2FE5CC" stroke-width="2" stroke-linecap="round" opacity="0.9" />
+      </g>
+    </svg>
+    <span class="tiger-label">顾问 / 快速访问</span>
+  </div>
+
+  <div id="tiger-drawer" class="tiger-drawer" aria-hidden="true">
+    <button class="close" aria-label="关闭">×</button>
+    <ul>
+      <li><a href="/thermal.html">分析仪器</a></li>
+      <li><a href="/projects.html">捣鼓</a></li>
+      <li><a href="/podcast.html">播客</a></li>
+      <li><a href="/bsite.html">B站</a></li>
+      <li><a href="/contact.html">联系</a></li>
+    </ul>
+  </div>
+
+  <script src="/assets/bg.js"></script>
+  <script>
+    // nav toggle
+    (function(){
+      const btn = document.querySelector('.nav-toggle');
+      const links = document.querySelector('.links');
+      btn.addEventListener('click', ()=>{
+        const expanded = btn.getAttribute('aria-expanded') === 'true';
+        btn.setAttribute('aria-expanded', String(!expanded));
+        links.classList.toggle('open');
+      });
+    })();
+
+    // tiger drawer
+    (function(){
+      const tiger = document.getElementById('tiger');
+      const drawer = document.getElementById('tiger-drawer');
+      const closeBtn = drawer.querySelector('.close');
+      function open(){ drawer.setAttribute('aria-hidden','false'); tiger.setAttribute('aria-expanded','true'); drawer.classList.add('open'); }
+      function close(){ drawer.setAttribute('aria-hidden','true'); tiger.setAttribute('aria-expanded','false'); drawer.classList.remove('open'); }
+      tiger.addEventListener('click', ()=>{ if(drawer.classList.contains('open')) close(); else open(); });
+      tiger.addEventListener('keydown', (e)=>{ if(e.key==='Enter'||e.key===' ') { e.preventDefault(); tiger.click(); } });
+      closeBtn.addEventListener('click', close);
+      document.addEventListener('keydown', (e)=>{ if(e.key==='Escape') close(); });
+    })();
+  </script>
+</body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-n
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-n
-
-
-
-
-n
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-n
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
