@@ -1,37 +1,41 @@
-/* Shared site styles (kept dark theme, improved spacing and readability) */
-:root{--accent1:#7C5CFF;--accent2:#2FE5CC;--bg:#05030f;--card:rgba(10,6,30,0.62);--glass:rgba(255,255,255,0.03);--text:#e8e4ff}
+/* Shared site styles (dark theme) - updated: larger tiger, stronger contrast tweaks */
+:root{--accent1:#7C5CFF;--accent2:#2FE5CC;--bg:#05030f;--card:rgba(10,6,30,0.66);--glass:rgba(255,255,255,0.03);--text:#e8e4ff}
 *{box-sizing:border-box}
 html,body{height:100%;margin:0;font-family: -apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif;background:var(--bg);color:var(--text)}
 #bg-root{position:fixed;inset:0;z-index:0}
 .container{max-width:1120px;margin:0 auto;padding:20px;position:relative;z-index:2}
-.site-nav{position:fixed;left:0;right:0;top:0;z-index:3;padding:12px 0;background:linear-gradient(180deg,rgba(3,2,14,0.45),rgba(3,2,14,0.12));backdrop-filter:blur(8px);}
+.site-nav{position:fixed;left:0;right:0;top:0;z-index:3;padding:12px 0;background:linear-gradient(180deg,rgba(3,2,14,0.55),rgba(3,2,14,0.14));backdrop-filter:blur(10px);}
 .nav-inner{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:0 20px}
 .brand{font-weight:600;color:var(--text);text-decoration:none;padding:6px 10px;border-radius:8px}
 .links{display:flex;gap:14px;align-items:center}
-.links a{color:rgba(230,230,255,0.88);text-decoration:none;padding:8px 10px;border-radius:8px}
+.links a{color:rgba(230,230,255,0.92);text-decoration:none;padding:8px 10px;border-radius:8px}
 .links a[aria-current]{background:linear-gradient(90deg,var(--accent1),var(--accent2));color:#05030f}
 .nav-toggle{display:none;background:transparent;border:1px solid rgba(255,255,255,0.04);color:var(--text);padding:6px 8px;border-radius:8px}
-.main{padding-top:110px}
+.main{padding-top:120px}
 .hero{padding:48px;background:linear-gradient(180deg,rgba(255,255,255,0.02),transparent);border-radius:16px}
-.hero-title{font-size:28px;margin:0 0 6px}
-.hero-lead{font-size:16px;color:rgba(232,228,255,0.9);margin:6px 0}
-.hero-sub{color:rgba(180,240,255,0.9);margin:6px 0;font-style:italic}
+.hero-title{font-size:32px;margin:0 0 6px}
+.hero-lead{font-size:16px;color:rgba(232,228,255,0.95);margin:6px 0}
+.hero-sub{color:rgba(180,240,255,0.95);margin:6px 0;font-style:italic}
 .cards{display:flex;gap:14px;margin-top:18px;flex-wrap:wrap}
 .card{display:block;padding:14px;border-radius:12px;background:var(--card);text-decoration:none;color:var(--text);min-width:180px}
 .card strong{display:block;margin-bottom:6px}
 .about{margin-top:24px;padding:18px;background:linear-gradient(180deg,rgba(255,255,255,0.02),transparent);border-radius:12px}
 .games .game-card{background:var(--card);padding:12px;border-radius:10px}
-.btn{display:inline-block;padding:8px 12px;border-radius:8px;background:linear-gradient(90deg,var(--accent1),var(--accent2));color:#05030f;text-decoration:none;font-weight:600}
+.btn{display:inline-block;padding:8px 12px;border-radius:8px;background:linear-gradient(90deg,var(--accent1),var(--accent2));color:#05030f;text-decoration:none;font-weight:700}
 
-/* Tiger quick access */
-.tiger{position:fixed;right:18px;bottom:18px;z-index:6;width:64px;height:64px;border-radius:50%;display:flex;align-items:center;justify-content:center;cursor:pointer;box-shadow:0 10px 30px rgba(28,20,60,0.6);background:linear-gradient(135deg,var(--accent1),var(--accent2));color:#05030f}
+/* Tiger quick access: larger and more minimal */
+.tiger{position:fixed;right:18px;bottom:18px;z-index:6;width:80px;height:80px;border-radius:50%;display:flex;align-items:center;justify-content:center;cursor:pointer;box-shadow:0 18px 44px rgba(28,20,60,0.7);background:linear-gradient(135deg,var(--accent1),var(--accent2));color:#05030f;border:1px solid rgba(255,255,255,0.04)}
+.tiger svg{width:56px;height:56px}
 .tiger-label{display:none}
-.tiger-drawer{position:fixed;right:18px;bottom:94px;z-index:6;width:220px;background:rgba(6,5,14,0.82);backdrop-filter:blur(8px);padding:12px;border-radius:10px;color:var(--text);box-shadow:0 18px 40px rgba(10,6,30,0.6);transform-origin:100% 100%;opacity:0;pointer-events:none}
+.tiger-drawer{position:fixed;right:18px;bottom:110px;z-index:6;width:240px;background:rgba(6,5,14,0.86);backdrop-filter:blur(10px);padding:12px;border-radius:12px;color:var(--text);box-shadow:0 20px 48px rgba(8,6,26,0.8);transform-origin:100% 100%;opacity:0;pointer-events:none}
 .tiger-drawer.open{opacity:1;pointer-events:auto;transform:translateY(0)}
 .tiger-drawer .close{position:absolute;left:8px;top:6px;background:transparent;border:0;color:var(--text);font-size:18px}
 .tiger-drawer ul{list-style:none;padding:0;margin:8px 0 0}
-.tiger-drawer li{margin:8px 0}
+.tiger-drawer li{margin:10px 0}
 .tiger-drawer a{color:var(--text);text-decoration:none}
 
+/* larger game canvas container tweaks */
+.games .game-card{min-height:120px}
+
 /* responsive */
-@media(max-width:768px){.links{display:none}.nav-toggle{display:block}.container{padding:12px}.main{padding-top:90px}}
+@media(max-width:960px){.links{display:none}.nav-toggle{display:block}.container{padding:12px}.main{padding-top:96px}.tiger{right:12px;bottom:12px;width:72px;height:72px}.tiger-drawer{right:12px;bottom:96px;width:200px}}
